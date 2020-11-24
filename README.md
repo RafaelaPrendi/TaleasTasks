@@ -8,3 +8,4 @@ To run:
 4. Open terminal in folder (in windows you can open it by SHIFT + RIGHT CLICK => open powershell)
 5. 'npm install' + enter
 6. 'npm start' + enter
+7. use postman to send get/post requests
