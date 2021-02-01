@@ -8,8 +8,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 const studentRoute = require('./routes/student.route');
+const courseRoute = require('./routes/course.route');
+const teacherRoute = require('./routes/teacher.route');
 
 app.use('/students', studentRoute);
+app.use('/courses', courseRoute);
+app.use('/teachers', teacherRoute);
 
 
 const port = process.env.PORT
