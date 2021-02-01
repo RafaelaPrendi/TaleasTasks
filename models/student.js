@@ -16,9 +16,12 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFind
     })
 
 const studentSchema = new mongoose.Schema({
-    id: Number,
     name: String,
-    age: Number
+    age: Number,
+    courses: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Course'
+    }],
 })
 studentSchema.set('toJSON', {
     transform: (document, returnedObject) => {
