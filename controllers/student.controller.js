@@ -1,70 +1,97 @@
 const Student = require('../models/student');
+const Course = require('../models/course');
+
 
 module.exports = {
 
-    getAllStudents: (req, res, next) => {
-        Student.find({}).then(allStudents => res.status(200).json(allStudents))
+    getAllStudents: async(req, res, next) => {
+        try {
+            let allStudents = await Student.find({});
+            res.status(200).json(allStudents);
+        } catch (error) {
+            console.log(error);
+            res.status(404).json({ message: "Not found error" });
+        }
     },
 
-    getSingleStudent: (req, res, next) => {
-        Student.findById(req.params.id).then(
-                student => {
-                    if (student) {
-                        res.status(200).json(student)
-                    } else {
-                        res.status(404).json({ message: "Not found error" })
-                    }
+    getSingleStudent: async(req, res, next) => {
+        try {
+            let student = await Student.findById(req.params.id);
+            if (student) {
+                res.status(200).json(student);
+            } else {
+                res.status(404).json({ message: "Not found error" });
+            }
+
+        } catch (error) {
+            console.log(error);
+            response.status(400).send({ error: 'bad id format' });
+        }
+    },
+
+    create: async(req, res, next) => {
+        try {
+            console.log(req.body, "body");
+            const body = req.body;
+
+            if (body.name === undefined) {
+                return res.status(400).json({ error: 'content missing' });
+            }
+
+            for (let courseId of body.courses) {
+                course = await Course.findById(courseId);
+                if (!course) {
+                    return res.status(404).json({ error: 'there is not such course!' });
                 }
-            )
-            .catch(error => {
-                console.log(error)
-                response.status(400).send({ error: 'bad id format' })
-            })
-    },
-
-    create: (req, res, next) => {
-        console.log(req.body, "body");
-        const body = req.body;
-
-        if (body.name === undefined) {
-            return response.status(400).json({ error: 'content missing' });
-        }
-        const newStudent = new Student({
-            id: body.id,
-            name: body.name,
-            age: body.age,
-        });
-        newStudent.save().then(savedStudent => {
-            res.status(200).json(savedStudent)
-        });
-
-    },
-    delete: (req, res, next) => {
-        Student.findByIdAndDelete(req.params.id).then(
-            result => {
-                console.log("deleted ", result)
-                res.status(200).json({})
-            }).catch(error => {
-            console.log(error)
-            res.status(500).json({ message: "Server has an error" })
-        })
-    },
-    update: (req, res, next) => {
-        const body = req.body
-        console.log("new data", body)
-        const student = {
-            name: body.name,
-            age: body.age,
+            }
+            const newStudent = new Student({
+                id: body.id,
+                name: body.name,
+                age: body.age,
+                courses: body.courses
+            });
+            let savedStudent = await newStudent.save();
+            res.status(200).json(savedStudent);
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({ message: "server has an error" });
         }
 
-        Student.findByIdAndUpdate(req.params.id, student, { new: true })
-            .then(updatedStudent => {
-                res.json(updatedStudent)
-            })
-            .catch(error => {
-                console.log(error)
-                res.status(500).json({ message: "Server has an error" })
-            })
+    },
+    delete: async(req, res, next) => {
+        try {
+            let result = await Student.findByIdAndDelete(req.params.id);
+            console.log("deleted ", result);
+            res.status(200).json({});
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({ message: "Server has an error" });
+        }
+    },
+    update: async(req, res, next) => {
+        try {
+            const body = req.body
+            console.log("new data", body);
+            if (body.name === undefined) {
+                return res.status(400).json({ error: 'content missing' });
+            }
+            for (let courseId of body.courses) {
+                course = await Course.findById(courseId);
+                if (!course) {
+                    return res.status(404).json({ error: 'there is not such course!' });
+                }
+            }
+            const student = {
+                name: body.name,
+                age: body.age,
+                courses: body.courses
+            }
+            let updatedStudent = await Student.findByIdAndUpdate(req.params.id, student, { new: true });
+            res.status(200).json(updatedStudent);
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({ message: "Server has an error" });
+        }
     },
 
 }
