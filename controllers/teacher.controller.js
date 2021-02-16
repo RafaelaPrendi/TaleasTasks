@@ -4,7 +4,7 @@ const { models } = require('mongoose');
 module.exports = {
     getAllTeachers: async(req, res, next) => {
         try {
-            let allTeachers = await Teacher.find({});
+            let allTeachers = await Teacher.find({}).populate('courses', 'name');
             res.status(200).json(allTeachers);
         } catch (error) {
             console.log(error);
@@ -13,7 +13,7 @@ module.exports = {
     },
     getSingleTeacher: async(req, res, next) => {
         try {
-            let teacher = await Teacher.findById(req.params.id);
+            let teacher = await Teacher.findById(req.params.id).populate('courses', 'name');
             if (teacher) {
                 res.status(200).json(teacher)
             } else {
@@ -32,7 +32,7 @@ module.exports = {
             res.status(200).json({});
         } catch (error) {
             console.log(error);
-            res.status(500).json({ message: "Server has an error" });
+            res.status(500).json({ message: "Something went wrong" });
         }
     },
     create: async(req, res, next) => {
@@ -81,7 +81,7 @@ module.exports = {
             res.status(200).json(updatedTeacher);
         } catch (error) {
             console.log(error);
-            res.status(500).json({ message: "Server has an error" });
+            res.status(500).json({ message: "Something went wrong" });
         }
     },
 

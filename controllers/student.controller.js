@@ -6,7 +6,7 @@ module.exports = {
 
     getAllStudents: async(req, res, next) => {
         try {
-            let allStudents = await Student.find({});
+            let allStudents = await Student.find({}).populate('courses', 'name');
             res.status(200).json(allStudents);
         } catch (error) {
             console.log(error);
@@ -16,7 +16,7 @@ module.exports = {
 
     getSingleStudent: async(req, res, next) => {
         try {
-            let student = await Student.findById(req.params.id);
+            let student = await Student.findById(req.params.id).populate('courses', 'name');
             if (student) {
                 res.status(200).json(student);
             } else {
@@ -54,7 +54,7 @@ module.exports = {
             res.status(200).json(savedStudent);
         } catch (error) {
             console.log(error);
-            res.status(500).json({ message: "server has an error" });
+            res.status(500).json({ message: "Something went wrong" });
         }
 
     },
@@ -65,7 +65,7 @@ module.exports = {
             res.status(200).json({});
         } catch (error) {
             console.log(error);
-            res.status(500).json({ message: "Server has an error" });
+            res.status(500).json({ message: "Something went wrong" });
         }
     },
     update: async(req, res, next) => {
@@ -90,7 +90,7 @@ module.exports = {
             res.status(200).json(updatedStudent);
         } catch (error) {
             console.log(error);
-            res.status(500).json({ message: "Server has an error" });
+            res.status(500).json({ message: "Something went wrong" });
         }
     },
 

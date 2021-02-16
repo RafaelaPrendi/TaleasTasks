@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-
+const Course = require('../models/course');
 const studentSchema = new mongoose.Schema({
     name: String,
     age: Number,
@@ -8,6 +8,20 @@ const studentSchema = new mongoose.Schema({
         ref: 'Course'
     }],
 })
+studentSchema.post('remove', document =>{
+    const studentId = document._id;
+    Course.find({students: {$in: [studentId]}}).then(courses =>{
+        Promise.all(
+            courses.map(course =>
+                Course.findByIdAndUpdate(
+                    course._id,
+                    { $pull: {students: studentId}},
+                    {new: true}
+                ))
+            );
+
+    });
+});
 studentSchema.set('toJSON', {
     transform: (document, returnedObject) => {
         returnedObject.id = returnedObject._id.toString()
