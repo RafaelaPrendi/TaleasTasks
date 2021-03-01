@@ -51,6 +51,16 @@ module.exports = {
                 courses: body.courses
             });
             let savedStudent = await newStudent.save();
+            console.log(savedStudent.id, "STUDENT ID")
+            for(let course of savedStudent.courses){
+                let n = Course.findByIdAndUpdate(
+                    {id:course},
+                    {$push: {students: savedStudent.id}}, 
+                    {new: true}
+                );
+                console.log(n, "UPDATE COURSE");
+            }
+          
             res.status(200).json(savedStudent);
         } catch (error) {
             console.log(error);

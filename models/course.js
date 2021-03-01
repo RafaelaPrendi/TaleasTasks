@@ -33,6 +33,30 @@ courseSchema.post('remove', document =>{
       );
   });
 });
+
+// courseSchema.post('save', document =>{
+//   const courseId = document._id;
+//   Student.find({courses: {$in: [courseId]}}).then(students =>{
+//         Promise.all(
+//             students.map(student =>
+//                 Student.findByIdAndUpdate(
+//                     student._id,
+//                     { $push: {courses: courseId} },
+//                     {new: true}
+//                 ))
+//         );
+//   });
+//   Teacher.find({courses: {$in: [courseId]}}).then(teachers =>{
+//       Promise.all(
+//           teachers.map(teacher =>
+//             Teacher.findByIdAndUpdate(
+//                 teacher._id,
+//                 {$push: {courses: courseId}},
+//                 {new: true}
+//             ))
+//       );
+//   });
+// });
 courseSchema.set('toJSON', {
     transform: (document, returnedObject) => {
         returnedObject.id = returnedObject._id.toString()

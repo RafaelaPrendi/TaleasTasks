@@ -22,6 +22,20 @@ studentSchema.post('remove', document =>{
 
     });
 });
+// test it
+// studentSchema.post('save', document =>{
+//     const studentId = document._id;
+//     const studentCourses = document.courses; 
+//     studentCourses.map(course =>
+//         {
+//                  Course.findByIdAndUpdate(
+//                  course._id,
+//                 { $push: {students: studentId}},
+//                 {new: true}
+//             );
+           
+//         });
+// });
 studentSchema.set('toJSON', {
     transform: (document, returnedObject) => {
         returnedObject.id = returnedObject._id.toString()

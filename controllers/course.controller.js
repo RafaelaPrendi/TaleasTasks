@@ -74,18 +74,30 @@ module.exports = {
             if (body.name === undefined) {
                 return response.status(400).json({ error: 'content missing' });
             }
-            for (let studentId of body.students) {
-                student = await Student.findById(studentId);
-                if (!student) {
-                    return res.status(404).json({ error: 'Student does not exist!' });
-                }
-            }
+           
             const newCourse = new Course({
                 name: body.name,
                 description: body.description,
                 hours: body.hours,
                 students: body.students
             });
+             for (let studentId of body.students) {
+                student = await Student.findById(studentId);
+                if (!student) {
+                    return res.status(404).json({ error: 'Student does not exist!' });
+                }
+                try{
+                    Student.findByIdAndUpdate(
+                    studentId,
+                    {$push: {courses: newCourse.id}},
+                    {new: true}
+                );
+                }
+                catch(error){
+                    console.log(error);
+                }
+            }
+            
             let savedCourse = await newCourse.save();
             res.status(200).json(savedCourse);
         } catch (error) {

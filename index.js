@@ -1,4 +1,5 @@
 require('dotenv').config()
+const serverless = require('serverless-http');
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
@@ -24,18 +25,17 @@ app.use('/courses', courseRoute);
 app.use('/teachers', teacherRoute);
 
 
-const port = process.env.PORT
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
-})
-
-
-
 // if (process.argv.length < 3) {
 //     console.log('Please provide the password as an argument: node mongo.js <password>')
 //     process.exit(1)
 // }
 // const password = process.argv[2]
+
+const port = process.env.PORT
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`)
+})
+
 
 const url = process.env.MONGODB_URI
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
@@ -45,3 +45,13 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFind
     .catch((error) => {
         console.log('error connecting to MongoDB:', error.message)
     })
+
+app.get('/hello', async function (req, res) {
+    res.json({
+        result: 'Hello, World!',
+    });
+    return;
+});
+
+
+module.exports.handler = serverless(app);
