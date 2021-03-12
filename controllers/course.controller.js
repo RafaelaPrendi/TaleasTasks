@@ -2,6 +2,7 @@ const Student = require('../models/student');
 const Course = require('../models/course');
 const course = require('../models/course');
 const { findById } = require('../models/student');
+
 module.exports = {
 
     getAllCourses: async(req, res, next) => {

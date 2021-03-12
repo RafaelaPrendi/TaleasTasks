@@ -14,3 +14,108 @@ functions:
     events:
       - http: ANY /
       - http: "ANY {proxy+}"
+
+  getAllStudents:
+    handler: handler.handler
+    events:
+      - http:
+          path: /students
+          method: get
+
+  getSingleStudent:
+    handler: index.handler
+    events:
+      - http:
+          path: /students/{id}
+          method: get
+
+  createStudent:
+    handler: index.handler
+    events:
+      - http:
+          path: /students
+          method: post
+
+  deleteStudent:
+    handler: index.handler
+    events:
+      - http:
+          path: /students/{id}
+          method: delete
+
+  updateStudent:
+    handler: index.handler
+    events:
+      - http:
+          path: /students/{id}
+          method: put
+
+  getAllCourses:
+    handler: index.handler
+    events:
+      - http:
+          path: /courses
+          method: get
+
+  getSingleCourse:
+    handler: index.handler
+    events:
+      - http:
+          path: /courses/{id}
+          method: get
+
+  createCourse:
+    handler: index.handler
+    events:
+      - http:
+          path: /courses
+          method: post
+
+  deleteCourse:
+    handler: index.handler
+    events:
+      - http:
+          path: /courses/{id}
+          method: delete
+
+  updateCourse:
+    handler: index.handler
+    events:
+      - http:
+          path: /courses/{id}
+          method: put
+
+  getAllTeachers:
+    handler: index.handler
+    events:
+      - http:
+          path: /teachers
+          method: get
+
+  getSingleTeacher:
+    handler: index.handler
+    events:
+      - http:
+          path: /teachers/{id}
+          method: get
+
+  createTeacher:
+    handler: index.handler
+    events:
+      - http:
+          path: /teachers
+          method: post
+
+  deleteTeacher:
+    handler: index.handler
+    events:
+      - http:
+          path: /teachers/{id}
+          method: delete
+
+  updateTeacher:
+    handler: index.handler
+    events:
+      - http:
+          path: /teachers/{id}
+          method: put
