@@ -16,14 +16,14 @@ functions:
       - http: "ANY {proxy+}"
 
   getAllStudents:
-    handler: handler.handler
+    handler: handlers/students/getAllStudents.handler
     events:
       - http:
           path: /students
           method: get
 
   getSingleStudent:
-    handler: index.handler
+    handler: handlers/students/getSingleStudent.handler
     events:
       - http:
           path: /students/{id}

@@ -22,14 +22,6 @@ app.use(function(req, res, next) {
   next();
 });
 
-const url = "mongodb+srv://rafaela:mongoadmin@cluster0.8y8ej.mongodb.net/student-app?retryWrites=true&w=majority";
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
-    .then(result => {
-        console.log('connected to MongoDB')
-    })
-    .catch((error) => {
-        console.log('error connecting to MongoDB:', error.message)
-    })
 
 const studentRoute = require('./routes/student.route');
 const courseRoute = require('./routes/course.route');
@@ -38,11 +30,6 @@ app.use('/students', studentRoute);
 app.use('/courses', courseRoute);
 app.use('/teachers', teacherRoute);
 
-
-// const port = process.env.PORT
-// app.listen(port, () => {
-//     console.log(`Example app listening at http://localhost:${port}`)
-// })
 
 
 app.get('/', async function (req, res) {
