@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 
 module.exports.handler =  async(event, context, callback) => {
             connectToDatabase();
-              try {
+            try {
             const body = JSON.parse(event.body);
 
             if (body.name === undefined) {
@@ -17,38 +17,32 @@ module.exports.handler =  async(event, context, callback) => {
                 }
                 return response;
             }
-            let coursesID = []
-            if(body.courses){
-                  for (let course of body.courses) {
-                      console.log(course, "OBJECT");
-                      var id = mongoose.Types.ObjectId(course.id);
-                    coursesID.push(id);
-                    course =  Course.findOne({_id: id});
-                    if (!course) {
-                        let response = {
-                            statusCode: 400, 
-                            body: JSON.stringify({ error: 'content course missing' }),
-                            headers: { 'Access-Control-Allow-Origin': '*' }
-                        }
-                    return response;
-                    }
+             let studentsID = []
+             if(body.students){
+                for (let student of body.students) {
+                    var id = mongoose.Types.ObjectId(student.id);
+                    studentsID.push(id);
+                student = await Student.findById(id);
+                if (!student) {
+                    return res.status(404).json({ error: 'Student does not exist!' });
                 }
             }
-            const student = {
+             }
+            
+            const course = {
                 name: body.name,
-                age: body.age,
-                courses: coursesID
-            };
-            let updatedStudent = await Student.findByIdAndUpdate(event.pathParameters.id, student, { new: true });
+                description: body.description,
+                hours: body.hours,
+                students: studentsID
+            }
+            let updatedCourse = await Course.findByIdAndUpdate(event.pathParameters.id, course, { new: true });
             let response = {
                     statusCode: 200, 
-                    body: JSON.stringify(updatedStudent),
+                    body: JSON.stringify(updatedCourse),
                     headers: { 'Access-Control-Allow-Origin': '*' }
                 }
                 return response;
-        
-        }
-        catch(error){
+        } catch (error) {
             console.log(error);
             let response = {
                     statusCode: 500, 

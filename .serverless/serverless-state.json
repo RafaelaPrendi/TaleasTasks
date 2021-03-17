@@ -264,7 +264,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/taleascrudtask/dev/1615666146337-2021-03-13T20:09:06.337Z/taleascrudtask.zip"
+                "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
               },
               "Handler": "index.handler",
               "Runtime": "nodejs14.x",
@@ -289,7 +289,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/taleascrudtask/dev/1615666146337-2021-03-13T20:09:06.337Z/taleascrudtask.zip"
+                "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
               },
               "Handler": "handlers/students/getAllStudents.handler",
               "Runtime": "nodejs14.x",
@@ -314,7 +314,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/taleascrudtask/dev/1615666146337-2021-03-13T20:09:06.337Z/taleascrudtask.zip"
+                "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
               },
               "Handler": "handlers/students/getSingleStudent.handler",
               "Runtime": "nodejs14.x",
@@ -339,9 +339,9 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/taleascrudtask/dev/1615666146337-2021-03-13T20:09:06.337Z/taleascrudtask.zip"
+                "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
               },
-              "Handler": "index.handler",
+              "Handler": "handlers/students/create.handler",
               "Runtime": "nodejs14.x",
               "FunctionName": "taleascrudtask-dev-createStudent",
               "MemorySize": 1024,
@@ -364,9 +364,9 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/taleascrudtask/dev/1615666146337-2021-03-13T20:09:06.337Z/taleascrudtask.zip"
+                "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
               },
-              "Handler": "index.handler",
+              "Handler": "handlers/students/delete.handler",
               "Runtime": "nodejs14.x",
               "FunctionName": "taleascrudtask-dev-deleteStudent",
               "MemorySize": 1024,
@@ -389,9 +389,9 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/taleascrudtask/dev/1615666146337-2021-03-13T20:09:06.337Z/taleascrudtask.zip"
+                "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
               },
-              "Handler": "index.handler",
+              "Handler": "handlers/students/update.handler",
               "Runtime": "nodejs14.x",
               "FunctionName": "taleascrudtask-dev-updateStudent",
               "MemorySize": 1024,
@@ -414,9 +414,9 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/taleascrudtask/dev/1615666146337-2021-03-13T20:09:06.337Z/taleascrudtask.zip"
+                "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
               },
-              "Handler": "index.handler",
+              "Handler": "handlers/courses/getAllCourses.handler",
               "Runtime": "nodejs14.x",
               "FunctionName": "taleascrudtask-dev-getAllCourses",
               "MemorySize": 1024,
@@ -439,9 +439,9 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/taleascrudtask/dev/1615666146337-2021-03-13T20:09:06.337Z/taleascrudtask.zip"
+                "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
               },
-              "Handler": "index.handler",
+              "Handler": "handlers/courses/getSingleCourse.handler",
               "Runtime": "nodejs14.x",
               "FunctionName": "taleascrudtask-dev-getSingleCourse",
               "MemorySize": 1024,
@@ -464,9 +464,9 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/taleascrudtask/dev/1615666146337-2021-03-13T20:09:06.337Z/taleascrudtask.zip"
+                "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
               },
-              "Handler": "index.handler",
+              "Handler": "handlers/courses/createCourse.handler",
               "Runtime": "nodejs14.x",
               "FunctionName": "taleascrudtask-dev-createCourse",
               "MemorySize": 1024,
@@ -489,9 +489,9 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/taleascrudtask/dev/1615666146337-2021-03-13T20:09:06.337Z/taleascrudtask.zip"
+                "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
               },
-              "Handler": "index.handler",
+              "Handler": "handlers/courses/deleteCourse.handler",
               "Runtime": "nodejs14.x",
               "FunctionName": "taleascrudtask-dev-deleteCourse",
               "MemorySize": 1024,
@@ -514,9 +514,9 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/taleascrudtask/dev/1615666146337-2021-03-13T20:09:06.337Z/taleascrudtask.zip"
+                "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
               },
-              "Handler": "index.handler",
+              "Handler": "handlers/courses/updateCourse.handler",
               "Runtime": "nodejs14.x",
               "FunctionName": "taleascrudtask-dev-updateCourse",
               "MemorySize": 1024,
@@ -539,9 +539,9 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/taleascrudtask/dev/1615666146337-2021-03-13T20:09:06.337Z/taleascrudtask.zip"
+                "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
               },
-              "Handler": "index.handler",
+              "Handler": "handlers/teachers/getAllTeachers.handler",
               "Runtime": "nodejs14.x",
               "FunctionName": "taleascrudtask-dev-getAllTeachers",
               "MemorySize": 1024,
@@ -564,9 +564,9 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/taleascrudtask/dev/1615666146337-2021-03-13T20:09:06.337Z/taleascrudtask.zip"
+                "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
               },
-              "Handler": "index.handler",
+              "Handler": "handlers/teachers/getSingleTeacher.handler",
               "Runtime": "nodejs14.x",
               "FunctionName": "taleascrudtask-dev-getSingleTeacher",
               "MemorySize": 1024,
@@ -589,9 +589,9 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/taleascrudtask/dev/1615666146337-2021-03-13T20:09:06.337Z/taleascrudtask.zip"
+                "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
               },
-              "Handler": "index.handler",
+              "Handler": "handlers/teachers/create.handler",
               "Runtime": "nodejs14.x",
               "FunctionName": "taleascrudtask-dev-createTeacher",
               "MemorySize": 1024,
@@ -614,9 +614,9 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/taleascrudtask/dev/1615666146337-2021-03-13T20:09:06.337Z/taleascrudtask.zip"
+                "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
               },
-              "Handler": "index.handler",
+              "Handler": "handlers/teachers/delete.handler",
               "Runtime": "nodejs14.x",
               "FunctionName": "taleascrudtask-dev-deleteTeacher",
               "MemorySize": 1024,
@@ -639,9 +639,9 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/taleascrudtask/dev/1615666146337-2021-03-13T20:09:06.337Z/taleascrudtask.zip"
+                "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
               },
-              "Handler": "index.handler",
+              "Handler": "handlers/teachers/update.handler",
               "Runtime": "nodejs14.x",
               "FunctionName": "taleascrudtask-dev-updateTeacher",
               "MemorySize": 1024,
@@ -657,164 +657,164 @@
               "UpdateTeacherLogGroup"
             ]
           },
-          "GetAllStudentsLambdaVersionV5J5nycF4Dz9aOOPEApHKAxOb5UqIKCOxCq7xZErb5w": {
+          "GetAllStudentsLambdaVersion4weCnC9xi8BHuYMt4vwfzUzIS3BECmjdSvHwIxYMtK0": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetAllStudentsLambdaFunction"
               },
-              "CodeSha256": "ZjmNWl2KHpzz+fybF85taip89tbHc1Qys+IZ9g0lsyg="
+              "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
             }
           },
-          "GetSingleStudentLambdaVersionZ9u1uzO4wValYMjv50G6aYDCjijzwRlHX591zp2AfJA": {
+          "GetSingleStudentLambdaVersionCOlhXYDqbokWMlAmwrCgzI5zisQx0qDOUbKwgKPgU": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetSingleStudentLambdaFunction"
               },
-              "CodeSha256": "ZjmNWl2KHpzz+fybF85taip89tbHc1Qys+IZ9g0lsyg="
+              "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
             }
           },
-          "CreateStudentLambdaVersionLUInzjkWDYUche4Zt7FaP9dzYXrdAakCJy2BxKZhU28": {
+          "CreateStudentLambdaVersiony1T6u0840Qscm8qpCgSkmnaKdplofnnD7qcyTCyJyw": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreateStudentLambdaFunction"
               },
-              "CodeSha256": "ZjmNWl2KHpzz+fybF85taip89tbHc1Qys+IZ9g0lsyg="
+              "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
             }
           },
-          "DeleteStudentLambdaVersionISeJ9VrTGqs6Q686WhMHkVVJwQVRtd49R1mePAtoTM": {
+          "DeleteStudentLambdaVersion6WotyFoya2dBv8j9281QzC0bACGUfmlmNHjN7CVKIQ": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "DeleteStudentLambdaFunction"
               },
-              "CodeSha256": "ZjmNWl2KHpzz+fybF85taip89tbHc1Qys+IZ9g0lsyg="
+              "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
             }
           },
-          "UpdateStudentLambdaVersionNg1pvpMKvJ6BhLXaNnT7SlnmfmvpuyO6Nx3Rq2tAAcw": {
+          "UpdateStudentLambdaVersion1UaocJQhhP3cJ8H1KMl95rhZWVeEwJB6wbL3GKPU": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "UpdateStudentLambdaFunction"
               },
-              "CodeSha256": "ZjmNWl2KHpzz+fybF85taip89tbHc1Qys+IZ9g0lsyg="
+              "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
             }
           },
-          "GetAllCoursesLambdaVersionB3ZZ6X7IoVcJKmB8Q3o9mnp99gAFmVNqlHV2r58ZMSw": {
+          "GetAllCoursesLambdaVersionSFRlCzXBjCtbqQJdhxnz4scHoeLtfUk4Ja3HON5eM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetAllCoursesLambdaFunction"
               },
-              "CodeSha256": "ZjmNWl2KHpzz+fybF85taip89tbHc1Qys+IZ9g0lsyg="
+              "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
             }
           },
-          "GetSingleCourseLambdaVersion55CtBnBkVWEcSHjhGAtXniQ9QqHejCb4L2OCW3sUfY": {
+          "GetSingleCourseLambdaVersionLxrfQc319EW7ESQrGA5s7gkPVzLNmw9jkYr8olmI": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetSingleCourseLambdaFunction"
               },
-              "CodeSha256": "ZjmNWl2KHpzz+fybF85taip89tbHc1Qys+IZ9g0lsyg="
+              "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
             }
           },
-          "CreateCourseLambdaVersionzyK9PD8lEE3S2bq40KTAe8x80TpJomzjogPFOxAphVQ": {
+          "CreateCourseLambdaVersionEX33ase1rgRz0uTafVlLk4OW4vBniLZwBzr0JzZ2NY": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreateCourseLambdaFunction"
               },
-              "CodeSha256": "ZjmNWl2KHpzz+fybF85taip89tbHc1Qys+IZ9g0lsyg="
+              "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
             }
           },
-          "DeleteCourseLambdaVersionZKsORZXLI9SLiSQDZwbJlTWE4ZKXVjvdXWts91VACE": {
+          "DeleteCourseLambdaVersionwAjxWqFAK1Px205xlEVvBjSWC5Qrp0ggBgwlGl2694": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "DeleteCourseLambdaFunction"
               },
-              "CodeSha256": "ZjmNWl2KHpzz+fybF85taip89tbHc1Qys+IZ9g0lsyg="
+              "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
             }
           },
-          "UpdateCourseLambdaVersionQ4tpaVh4F02jYwwULCwrTMpaqwxnVLlOJY2c2JzaDfs": {
+          "UpdateCourseLambdaVersionaEPoKo2RyDJIwS704dt7TKUW1KUi7Qg8IR63L3lcpJA": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "UpdateCourseLambdaFunction"
               },
-              "CodeSha256": "ZjmNWl2KHpzz+fybF85taip89tbHc1Qys+IZ9g0lsyg="
+              "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
             }
           },
-          "GetAllTeachersLambdaVersionEGqWtNI84D4TfR2aDZ1gCT2qkKSY1mQZ4mts2OdP00": {
+          "GetAllTeachersLambdaVersionscvl1znTmh1WMV7v150NZJ4oWbFx8GwCFMaP98IzhOI": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetAllTeachersLambdaFunction"
               },
-              "CodeSha256": "ZjmNWl2KHpzz+fybF85taip89tbHc1Qys+IZ9g0lsyg="
+              "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
             }
           },
-          "GetSingleTeacherLambdaVersionOWxZQQfbPEjX4GWy57dr92FjVfRFkrBA94TQhRKz47U": {
+          "GetSingleTeacherLambdaVersionxKe0FB3JXcP3B7BGCSpIpGbFCBrBmUCDCBAfC3tbE": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetSingleTeacherLambdaFunction"
               },
-              "CodeSha256": "ZjmNWl2KHpzz+fybF85taip89tbHc1Qys+IZ9g0lsyg="
+              "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
             }
           },
-          "CreateTeacherLambdaVersionCU6UK7KiEsbspo6KV0qqybF1MbckEnFyK82Gq7i5oNo": {
+          "CreateTeacherLambdaVersionpXT8Zg2uGm6Uj3sArkmrUNVXOGtgGsIVxQNcvWbFftw": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreateTeacherLambdaFunction"
               },
-              "CodeSha256": "ZjmNWl2KHpzz+fybF85taip89tbHc1Qys+IZ9g0lsyg="
+              "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
             }
           },
-          "DeleteTeacherLambdaVersion9APY5X60zUZlAsP2VquZMFmU15gLsiw2YZ6t5lV8w": {
-            "Type": "AWS::Lambda::Version",
-            "DeletionPolicy": "Retain",
-            "Properties": {
-              "FunctionName": {
-                "Ref": "DeleteTeacherLambdaFunction"
-              },
-              "CodeSha256": "ZjmNWl2KHpzz+fybF85taip89tbHc1Qys+IZ9g0lsyg="
-            }
-          },
-          "UpdateTeacherLambdaVersionAeS3den1HyVKx2ob3avt5gIW7cmsTi43IBrUoMf3bOA": {
-            "Type": "AWS::Lambda::Version",
-            "DeletionPolicy": "Retain",
-            "Properties": {
-              "FunctionName": {
-                "Ref": "UpdateTeacherLambdaFunction"
-              },
-              "CodeSha256": "ZjmNWl2KHpzz+fybF85taip89tbHc1Qys+IZ9g0lsyg="
-            }
-          },
-          "IndexLambdaVersionYMLFiGhnikRpy7PhXa2Atl7CXCdJHv19GFB7atRex0": {
+          "IndexLambdaVersionIQE1fBAzheyp6yeAulF1aOcKZUUrIXoiXUUTsV2bYQ": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "IndexLambdaFunction"
               },
-              "CodeSha256": "ZjmNWl2KHpzz+fybF85taip89tbHc1Qys+IZ9g0lsyg="
+              "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
+            }
+          },
+          "UpdateTeacherLambdaVersion5a16YKRzTNUmvG2rG8m04VxKFFrouaB92U53274ao": {
+            "Type": "AWS::Lambda::Version",
+            "DeletionPolicy": "Retain",
+            "Properties": {
+              "FunctionName": {
+                "Ref": "UpdateTeacherLambdaFunction"
+              },
+              "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
+            }
+          },
+          "DeleteTeacherLambdaVersionc6EHNFpMhVytT6sRfEtj0Qp1lzNwITssyDVyBoHBbAk": {
+            "Type": "AWS::Lambda::Version",
+            "DeletionPolicy": "Retain",
+            "Properties": {
+              "FunctionName": {
+                "Ref": "DeleteTeacherLambdaFunction"
+              },
+              "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
             }
           },
           "ApiGatewayRestApi": {
@@ -1659,7 +1659,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1615666141366": {
+          "ApiGatewayDeployment1615982250152": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -2289,97 +2289,97 @@
           "GetAllStudentsLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetAllStudentsLambdaVersionV5J5nycF4Dz9aOOPEApHKAxOb5UqIKCOxCq7xZErb5w"
+              "Ref": "GetAllStudentsLambdaVersion4weCnC9xi8BHuYMt4vwfzUzIS3BECmjdSvHwIxYMtK0"
             }
           },
           "GetSingleStudentLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetSingleStudentLambdaVersionZ9u1uzO4wValYMjv50G6aYDCjijzwRlHX591zp2AfJA"
+              "Ref": "GetSingleStudentLambdaVersionCOlhXYDqbokWMlAmwrCgzI5zisQx0qDOUbKwgKPgU"
             }
           },
           "CreateStudentLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreateStudentLambdaVersionLUInzjkWDYUche4Zt7FaP9dzYXrdAakCJy2BxKZhU28"
+              "Ref": "CreateStudentLambdaVersiony1T6u0840Qscm8qpCgSkmnaKdplofnnD7qcyTCyJyw"
             }
           },
           "DeleteStudentLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "DeleteStudentLambdaVersionISeJ9VrTGqs6Q686WhMHkVVJwQVRtd49R1mePAtoTM"
+              "Ref": "DeleteStudentLambdaVersion6WotyFoya2dBv8j9281QzC0bACGUfmlmNHjN7CVKIQ"
             }
           },
           "UpdateStudentLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "UpdateStudentLambdaVersionNg1pvpMKvJ6BhLXaNnT7SlnmfmvpuyO6Nx3Rq2tAAcw"
+              "Ref": "UpdateStudentLambdaVersion1UaocJQhhP3cJ8H1KMl95rhZWVeEwJB6wbL3GKPU"
             }
           },
           "GetAllCoursesLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetAllCoursesLambdaVersionB3ZZ6X7IoVcJKmB8Q3o9mnp99gAFmVNqlHV2r58ZMSw"
+              "Ref": "GetAllCoursesLambdaVersionSFRlCzXBjCtbqQJdhxnz4scHoeLtfUk4Ja3HON5eM"
             }
           },
           "GetSingleCourseLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetSingleCourseLambdaVersion55CtBnBkVWEcSHjhGAtXniQ9QqHejCb4L2OCW3sUfY"
+              "Ref": "GetSingleCourseLambdaVersionLxrfQc319EW7ESQrGA5s7gkPVzLNmw9jkYr8olmI"
             }
           },
           "CreateCourseLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreateCourseLambdaVersionzyK9PD8lEE3S2bq40KTAe8x80TpJomzjogPFOxAphVQ"
+              "Ref": "CreateCourseLambdaVersionEX33ase1rgRz0uTafVlLk4OW4vBniLZwBzr0JzZ2NY"
             }
           },
           "DeleteCourseLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "DeleteCourseLambdaVersionZKsORZXLI9SLiSQDZwbJlTWE4ZKXVjvdXWts91VACE"
+              "Ref": "DeleteCourseLambdaVersionwAjxWqFAK1Px205xlEVvBjSWC5Qrp0ggBgwlGl2694"
             }
           },
           "UpdateCourseLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "UpdateCourseLambdaVersionQ4tpaVh4F02jYwwULCwrTMpaqwxnVLlOJY2c2JzaDfs"
+              "Ref": "UpdateCourseLambdaVersionaEPoKo2RyDJIwS704dt7TKUW1KUi7Qg8IR63L3lcpJA"
             }
           },
           "GetAllTeachersLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetAllTeachersLambdaVersionEGqWtNI84D4TfR2aDZ1gCT2qkKSY1mQZ4mts2OdP00"
+              "Ref": "GetAllTeachersLambdaVersionscvl1znTmh1WMV7v150NZJ4oWbFx8GwCFMaP98IzhOI"
             }
           },
           "GetSingleTeacherLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetSingleTeacherLambdaVersionOWxZQQfbPEjX4GWy57dr92FjVfRFkrBA94TQhRKz47U"
+              "Ref": "GetSingleTeacherLambdaVersionxKe0FB3JXcP3B7BGCSpIpGbFCBrBmUCDCBAfC3tbE"
             }
           },
           "CreateTeacherLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreateTeacherLambdaVersionCU6UK7KiEsbspo6KV0qqybF1MbckEnFyK82Gq7i5oNo"
-            }
-          },
-          "DeleteTeacherLambdaFunctionQualifiedArn": {
-            "Description": "Current Lambda function version",
-            "Value": {
-              "Ref": "DeleteTeacherLambdaVersion9APY5X60zUZlAsP2VquZMFmU15gLsiw2YZ6t5lV8w"
-            }
-          },
-          "UpdateTeacherLambdaFunctionQualifiedArn": {
-            "Description": "Current Lambda function version",
-            "Value": {
-              "Ref": "UpdateTeacherLambdaVersionAeS3den1HyVKx2ob3avt5gIW7cmsTi43IBrUoMf3bOA"
+              "Ref": "CreateTeacherLambdaVersionpXT8Zg2uGm6Uj3sArkmrUNVXOGtgGsIVxQNcvWbFftw"
             }
           },
           "IndexLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "IndexLambdaVersionYMLFiGhnikRpy7PhXa2Atl7CXCdJHv19GFB7atRex0"
+              "Ref": "IndexLambdaVersionIQE1fBAzheyp6yeAulF1aOcKZUUrIXoiXUUTsV2bYQ"
+            }
+          },
+          "UpdateTeacherLambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Ref": "UpdateTeacherLambdaVersion5a16YKRzTNUmvG2rG8m04VxKFFrouaB92U53274ao"
+            }
+          },
+          "DeleteTeacherLambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Ref": "DeleteTeacherLambdaVersionc6EHNFpMhVytT6sRfEtj0Qp1lzNwITssyDVyBoHBbAk"
             }
           },
           "ServiceEndpoint": {
@@ -2509,7 +2509,7 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "IndexLambdaVersionYMLFiGhnikRpy7PhXa2Atl7CXCdJHv19GFB7atRex0"
+        "versionLogicalId": "IndexLambdaVersionIQE1fBAzheyp6yeAulF1aOcKZUUrIXoiXUUTsV2bYQ"
       },
       "getAllStudents": {
         "handler": "handlers/students/getAllStudents.handler",
@@ -2528,7 +2528,7 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "GetAllStudentsLambdaVersionV5J5nycF4Dz9aOOPEApHKAxOb5UqIKCOxCq7xZErb5w"
+        "versionLogicalId": "GetAllStudentsLambdaVersion4weCnC9xi8BHuYMt4vwfzUzIS3BECmjdSvHwIxYMtK0"
       },
       "getSingleStudent": {
         "handler": "handlers/students/getSingleStudent.handler",
@@ -2547,10 +2547,10 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "GetSingleStudentLambdaVersionZ9u1uzO4wValYMjv50G6aYDCjijzwRlHX591zp2AfJA"
+        "versionLogicalId": "GetSingleStudentLambdaVersionCOlhXYDqbokWMlAmwrCgzI5zisQx0qDOUbKwgKPgU"
       },
       "createStudent": {
-        "handler": "index.handler",
+        "handler": "handlers/students/create.handler",
         "events": [
           {
             "http": {
@@ -2566,10 +2566,10 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "CreateStudentLambdaVersionLUInzjkWDYUche4Zt7FaP9dzYXrdAakCJy2BxKZhU28"
+        "versionLogicalId": "CreateStudentLambdaVersiony1T6u0840Qscm8qpCgSkmnaKdplofnnD7qcyTCyJyw"
       },
       "deleteStudent": {
-        "handler": "index.handler",
+        "handler": "handlers/students/delete.handler",
         "events": [
           {
             "http": {
@@ -2585,10 +2585,10 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "DeleteStudentLambdaVersionISeJ9VrTGqs6Q686WhMHkVVJwQVRtd49R1mePAtoTM"
+        "versionLogicalId": "DeleteStudentLambdaVersion6WotyFoya2dBv8j9281QzC0bACGUfmlmNHjN7CVKIQ"
       },
       "updateStudent": {
-        "handler": "index.handler",
+        "handler": "handlers/students/update.handler",
         "events": [
           {
             "http": {
@@ -2604,10 +2604,10 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "UpdateStudentLambdaVersionNg1pvpMKvJ6BhLXaNnT7SlnmfmvpuyO6Nx3Rq2tAAcw"
+        "versionLogicalId": "UpdateStudentLambdaVersion1UaocJQhhP3cJ8H1KMl95rhZWVeEwJB6wbL3GKPU"
       },
       "getAllCourses": {
-        "handler": "index.handler",
+        "handler": "handlers/courses/getAllCourses.handler",
         "events": [
           {
             "http": {
@@ -2623,10 +2623,10 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "GetAllCoursesLambdaVersionB3ZZ6X7IoVcJKmB8Q3o9mnp99gAFmVNqlHV2r58ZMSw"
+        "versionLogicalId": "GetAllCoursesLambdaVersionSFRlCzXBjCtbqQJdhxnz4scHoeLtfUk4Ja3HON5eM"
       },
       "getSingleCourse": {
-        "handler": "index.handler",
+        "handler": "handlers/courses/getSingleCourse.handler",
         "events": [
           {
             "http": {
@@ -2642,10 +2642,10 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "GetSingleCourseLambdaVersion55CtBnBkVWEcSHjhGAtXniQ9QqHejCb4L2OCW3sUfY"
+        "versionLogicalId": "GetSingleCourseLambdaVersionLxrfQc319EW7ESQrGA5s7gkPVzLNmw9jkYr8olmI"
       },
       "createCourse": {
-        "handler": "index.handler",
+        "handler": "handlers/courses/createCourse.handler",
         "events": [
           {
             "http": {
@@ -2661,10 +2661,10 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "CreateCourseLambdaVersionzyK9PD8lEE3S2bq40KTAe8x80TpJomzjogPFOxAphVQ"
+        "versionLogicalId": "CreateCourseLambdaVersionEX33ase1rgRz0uTafVlLk4OW4vBniLZwBzr0JzZ2NY"
       },
       "deleteCourse": {
-        "handler": "index.handler",
+        "handler": "handlers/courses/deleteCourse.handler",
         "events": [
           {
             "http": {
@@ -2680,10 +2680,10 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "DeleteCourseLambdaVersionZKsORZXLI9SLiSQDZwbJlTWE4ZKXVjvdXWts91VACE"
+        "versionLogicalId": "DeleteCourseLambdaVersionwAjxWqFAK1Px205xlEVvBjSWC5Qrp0ggBgwlGl2694"
       },
       "updateCourse": {
-        "handler": "index.handler",
+        "handler": "handlers/courses/updateCourse.handler",
         "events": [
           {
             "http": {
@@ -2699,10 +2699,10 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "UpdateCourseLambdaVersionQ4tpaVh4F02jYwwULCwrTMpaqwxnVLlOJY2c2JzaDfs"
+        "versionLogicalId": "UpdateCourseLambdaVersionaEPoKo2RyDJIwS704dt7TKUW1KUi7Qg8IR63L3lcpJA"
       },
       "getAllTeachers": {
-        "handler": "index.handler",
+        "handler": "handlers/teachers/getAllTeachers.handler",
         "events": [
           {
             "http": {
@@ -2718,10 +2718,10 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "GetAllTeachersLambdaVersionEGqWtNI84D4TfR2aDZ1gCT2qkKSY1mQZ4mts2OdP00"
+        "versionLogicalId": "GetAllTeachersLambdaVersionscvl1znTmh1WMV7v150NZJ4oWbFx8GwCFMaP98IzhOI"
       },
       "getSingleTeacher": {
-        "handler": "index.handler",
+        "handler": "handlers/teachers/getSingleTeacher.handler",
         "events": [
           {
             "http": {
@@ -2737,10 +2737,10 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "GetSingleTeacherLambdaVersionOWxZQQfbPEjX4GWy57dr92FjVfRFkrBA94TQhRKz47U"
+        "versionLogicalId": "GetSingleTeacherLambdaVersionxKe0FB3JXcP3B7BGCSpIpGbFCBrBmUCDCBAfC3tbE"
       },
       "createTeacher": {
-        "handler": "index.handler",
+        "handler": "handlers/teachers/create.handler",
         "events": [
           {
             "http": {
@@ -2756,10 +2756,10 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "CreateTeacherLambdaVersionCU6UK7KiEsbspo6KV0qqybF1MbckEnFyK82Gq7i5oNo"
+        "versionLogicalId": "CreateTeacherLambdaVersionpXT8Zg2uGm6Uj3sArkmrUNVXOGtgGsIVxQNcvWbFftw"
       },
       "deleteTeacher": {
-        "handler": "index.handler",
+        "handler": "handlers/teachers/delete.handler",
         "events": [
           {
             "http": {
@@ -2775,10 +2775,10 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "DeleteTeacherLambdaVersion9APY5X60zUZlAsP2VquZMFmU15gLsiw2YZ6t5lV8w"
+        "versionLogicalId": "DeleteTeacherLambdaVersionc6EHNFpMhVytT6sRfEtj0Qp1lzNwITssyDVyBoHBbAk"
       },
       "updateTeacher": {
-        "handler": "index.handler",
+        "handler": "handlers/teachers/update.handler",
         "events": [
           {
             "http": {
@@ -2794,7 +2794,7 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "UpdateTeacherLambdaVersionAeS3den1HyVKx2ob3avt5gIW7cmsTi43IBrUoMf3bOA"
+        "versionLogicalId": "UpdateTeacherLambdaVersion5a16YKRzTNUmvG2rG8m04VxKFFrouaB92U53274ao"
       }
     },
     "configValidationMode": "warn",
@@ -2816,7 +2816,7 @@
     "artifact": "C:\\Users\\Zbook 15\\Web Dev projects\\TaleasTask1-Crud\\.serverless\\taleascrudtask.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/taleascrudtask/dev/1615666146337-2021-03-13T20:09:06.337Z",
+    "artifactDirectoryName": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z",
     "artifact": "taleascrudtask.zip"
   }
 }
