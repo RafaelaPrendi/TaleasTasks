@@ -71,12 +71,6 @@
         }
       }
     },
-    "IndexLogGroup": {
-      "Type": "AWS::Logs::LogGroup",
-      "Properties": {
-        "LogGroupName": "/aws/lambda/taleascrudtask-dev-index"
-      }
-    },
     "GetAllStudentsLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
@@ -244,31 +238,6 @@
         }
       }
     },
-    "IndexLambdaFunction": {
-      "Type": "AWS::Lambda::Function",
-      "Properties": {
-        "Code": {
-          "S3Bucket": {
-            "Ref": "ServerlessDeploymentBucket"
-          },
-          "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
-        },
-        "Handler": "index.handler",
-        "Runtime": "nodejs14.x",
-        "FunctionName": "taleascrudtask-dev-index",
-        "MemorySize": 1024,
-        "Timeout": 6,
-        "Role": {
-          "Fn::GetAtt": [
-            "IamRoleLambdaExecution",
-            "Arn"
-          ]
-        }
-      },
-      "DependsOn": [
-        "IndexLogGroup"
-      ]
-    },
     "GetAllStudentsLambdaFunction": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -276,7 +245,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
+          "S3Key": "serverless/taleascrudtask/dev/1616087857668-2021-03-18T17:17:37.668Z/taleascrudtask.zip"
         },
         "Handler": "handlers/students/getAllStudents.handler",
         "Runtime": "nodejs14.x",
@@ -301,7 +270,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
+          "S3Key": "serverless/taleascrudtask/dev/1616087857668-2021-03-18T17:17:37.668Z/taleascrudtask.zip"
         },
         "Handler": "handlers/students/getSingleStudent.handler",
         "Runtime": "nodejs14.x",
@@ -326,7 +295,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
+          "S3Key": "serverless/taleascrudtask/dev/1616087857668-2021-03-18T17:17:37.668Z/taleascrudtask.zip"
         },
         "Handler": "handlers/students/create.handler",
         "Runtime": "nodejs14.x",
@@ -351,7 +320,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
+          "S3Key": "serverless/taleascrudtask/dev/1616087857668-2021-03-18T17:17:37.668Z/taleascrudtask.zip"
         },
         "Handler": "handlers/students/delete.handler",
         "Runtime": "nodejs14.x",
@@ -376,7 +345,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
+          "S3Key": "serverless/taleascrudtask/dev/1616087857668-2021-03-18T17:17:37.668Z/taleascrudtask.zip"
         },
         "Handler": "handlers/students/update.handler",
         "Runtime": "nodejs14.x",
@@ -401,7 +370,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
+          "S3Key": "serverless/taleascrudtask/dev/1616087857668-2021-03-18T17:17:37.668Z/taleascrudtask.zip"
         },
         "Handler": "handlers/courses/getAllCourses.handler",
         "Runtime": "nodejs14.x",
@@ -426,7 +395,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
+          "S3Key": "serverless/taleascrudtask/dev/1616087857668-2021-03-18T17:17:37.668Z/taleascrudtask.zip"
         },
         "Handler": "handlers/courses/getSingleCourse.handler",
         "Runtime": "nodejs14.x",
@@ -451,7 +420,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
+          "S3Key": "serverless/taleascrudtask/dev/1616087857668-2021-03-18T17:17:37.668Z/taleascrudtask.zip"
         },
         "Handler": "handlers/courses/createCourse.handler",
         "Runtime": "nodejs14.x",
@@ -476,7 +445,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
+          "S3Key": "serverless/taleascrudtask/dev/1616087857668-2021-03-18T17:17:37.668Z/taleascrudtask.zip"
         },
         "Handler": "handlers/courses/deleteCourse.handler",
         "Runtime": "nodejs14.x",
@@ -501,7 +470,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
+          "S3Key": "serverless/taleascrudtask/dev/1616087857668-2021-03-18T17:17:37.668Z/taleascrudtask.zip"
         },
         "Handler": "handlers/courses/updateCourse.handler",
         "Runtime": "nodejs14.x",
@@ -526,7 +495,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
+          "S3Key": "serverless/taleascrudtask/dev/1616087857668-2021-03-18T17:17:37.668Z/taleascrudtask.zip"
         },
         "Handler": "handlers/teachers/getAllTeachers.handler",
         "Runtime": "nodejs14.x",
@@ -551,7 +520,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
+          "S3Key": "serverless/taleascrudtask/dev/1616087857668-2021-03-18T17:17:37.668Z/taleascrudtask.zip"
         },
         "Handler": "handlers/teachers/getSingleTeacher.handler",
         "Runtime": "nodejs14.x",
@@ -576,7 +545,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
+          "S3Key": "serverless/taleascrudtask/dev/1616087857668-2021-03-18T17:17:37.668Z/taleascrudtask.zip"
         },
         "Handler": "handlers/teachers/create.handler",
         "Runtime": "nodejs14.x",
@@ -601,7 +570,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
+          "S3Key": "serverless/taleascrudtask/dev/1616087857668-2021-03-18T17:17:37.668Z/taleascrudtask.zip"
         },
         "Handler": "handlers/teachers/delete.handler",
         "Runtime": "nodejs14.x",
@@ -626,7 +595,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/taleascrudtask/dev/1615982254844-2021-03-17T11:57:34.844Z/taleascrudtask.zip"
+          "S3Key": "serverless/taleascrudtask/dev/1616087857668-2021-03-18T17:17:37.668Z/taleascrudtask.zip"
         },
         "Handler": "handlers/teachers/update.handler",
         "Runtime": "nodejs14.x",
@@ -644,164 +613,154 @@
         "UpdateTeacherLogGroup"
       ]
     },
-    "GetAllStudentsLambdaVersion4weCnC9xi8BHuYMt4vwfzUzIS3BECmjdSvHwIxYMtK0": {
-      "Type": "AWS::Lambda::Version",
-      "DeletionPolicy": "Retain",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "GetAllStudentsLambdaFunction"
-        },
-        "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
-      }
-    },
-    "GetSingleStudentLambdaVersionCOlhXYDqbokWMlAmwrCgzI5zisQx0qDOUbKwgKPgU": {
+    "GetSingleStudentLambdaVersionWbmtKUzwLtnw1Jqko1evCi1rVflwi2LIOTGgYdE4Yao": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetSingleStudentLambdaFunction"
         },
-        "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
+        "CodeSha256": "icfccN500veMSXWavWMmXB/P804iywb5I/ujA60ZhMQ="
       }
     },
-    "CreateStudentLambdaVersiony1T6u0840Qscm8qpCgSkmnaKdplofnnD7qcyTCyJyw": {
+    "CreateStudentLambdaVersionDzdT3A2Zc0KJ26l1MPsmAuCRuszYwHLdsxQqf7WrYTs": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateStudentLambdaFunction"
         },
-        "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
+        "CodeSha256": "icfccN500veMSXWavWMmXB/P804iywb5I/ujA60ZhMQ="
       }
     },
-    "DeleteStudentLambdaVersion6WotyFoya2dBv8j9281QzC0bACGUfmlmNHjN7CVKIQ": {
+    "DeleteStudentLambdaVersionX2DgzF0FyUYZzBvH6CUJ35SkYmJtBNAhVkZ8PQT3sg": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "DeleteStudentLambdaFunction"
         },
-        "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
+        "CodeSha256": "icfccN500veMSXWavWMmXB/P804iywb5I/ujA60ZhMQ="
       }
     },
-    "UpdateStudentLambdaVersion1UaocJQhhP3cJ8H1KMl95rhZWVeEwJB6wbL3GKPU": {
+    "UpdateStudentLambdaVersionVHsgtgg18ybIw2FjC75qnKZy4AxzBVIjnVjjLdDDEg": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "UpdateStudentLambdaFunction"
         },
-        "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
+        "CodeSha256": "icfccN500veMSXWavWMmXB/P804iywb5I/ujA60ZhMQ="
       }
     },
-    "GetAllCoursesLambdaVersionSFRlCzXBjCtbqQJdhxnz4scHoeLtfUk4Ja3HON5eM": {
+    "GetAllCoursesLambdaVersionKbNzvyM25Mp4BhfsGwBqUh0GGbId45o49gKq8GH8": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetAllCoursesLambdaFunction"
         },
-        "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
+        "CodeSha256": "icfccN500veMSXWavWMmXB/P804iywb5I/ujA60ZhMQ="
       }
     },
-    "GetSingleCourseLambdaVersionLxrfQc319EW7ESQrGA5s7gkPVzLNmw9jkYr8olmI": {
+    "GetSingleCourseLambdaVersionyiiyXSweurttX3Ey0ccOGOkxKGgCbIaCWknxYmWNCbo": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetSingleCourseLambdaFunction"
         },
-        "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
+        "CodeSha256": "icfccN500veMSXWavWMmXB/P804iywb5I/ujA60ZhMQ="
       }
     },
-    "CreateCourseLambdaVersionEX33ase1rgRz0uTafVlLk4OW4vBniLZwBzr0JzZ2NY": {
-      "Type": "AWS::Lambda::Version",
-      "DeletionPolicy": "Retain",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "CreateCourseLambdaFunction"
-        },
-        "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
-      }
-    },
-    "DeleteCourseLambdaVersionwAjxWqFAK1Px205xlEVvBjSWC5Qrp0ggBgwlGl2694": {
+    "DeleteCourseLambdaVersiongb3IS4aMQb0lSHBummH7bZlZjUNpEm41B2ecLlQ": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "DeleteCourseLambdaFunction"
         },
-        "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
+        "CodeSha256": "icfccN500veMSXWavWMmXB/P804iywb5I/ujA60ZhMQ="
       }
     },
-    "UpdateCourseLambdaVersionaEPoKo2RyDJIwS704dt7TKUW1KUi7Qg8IR63L3lcpJA": {
+    "CreateCourseLambdaVersioncTdJZE2fk3XNLvakgxWFgtcnwXFSBvOWJ1EJan9mwE": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "CreateCourseLambdaFunction"
+        },
+        "CodeSha256": "icfccN500veMSXWavWMmXB/P804iywb5I/ujA60ZhMQ="
+      }
+    },
+    "UpdateCourseLambdaVersion1EzbgbQ5tjxnZymT02Fbz41J9DVsZvjHsG3CltKt68": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "UpdateCourseLambdaFunction"
         },
-        "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
+        "CodeSha256": "icfccN500veMSXWavWMmXB/P804iywb5I/ujA60ZhMQ="
       }
     },
-    "GetAllTeachersLambdaVersionscvl1znTmh1WMV7v150NZJ4oWbFx8GwCFMaP98IzhOI": {
+    "GetAllTeachersLambdaVersion49v5Md5Kutyiqm61D6rVzv13E2kYfi8AENRLTzSTK0M": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetAllTeachersLambdaFunction"
         },
-        "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
+        "CodeSha256": "icfccN500veMSXWavWMmXB/P804iywb5I/ujA60ZhMQ="
       }
     },
-    "GetSingleTeacherLambdaVersionxKe0FB3JXcP3B7BGCSpIpGbFCBrBmUCDCBAfC3tbE": {
+    "GetSingleTeacherLambdaVersionpUzDjRbY4SLZj9WVMWRsw0IUUts8yFaN5xTvXHRLNrs": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetSingleTeacherLambdaFunction"
         },
-        "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
+        "CodeSha256": "icfccN500veMSXWavWMmXB/P804iywb5I/ujA60ZhMQ="
       }
     },
-    "CreateTeacherLambdaVersionpXT8Zg2uGm6Uj3sArkmrUNVXOGtgGsIVxQNcvWbFftw": {
+    "CreateTeacherLambdaVersioniayBLUBzsPycUK99PpEsswK0DbeaJ8L9GrOljr4E8": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateTeacherLambdaFunction"
         },
-        "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
+        "CodeSha256": "icfccN500veMSXWavWMmXB/P804iywb5I/ujA60ZhMQ="
       }
     },
-    "IndexLambdaVersionIQE1fBAzheyp6yeAulF1aOcKZUUrIXoiXUUTsV2bYQ": {
-      "Type": "AWS::Lambda::Version",
-      "DeletionPolicy": "Retain",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "IndexLambdaFunction"
-        },
-        "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
-      }
-    },
-    "UpdateTeacherLambdaVersion5a16YKRzTNUmvG2rG8m04VxKFFrouaB92U53274ao": {
-      "Type": "AWS::Lambda::Version",
-      "DeletionPolicy": "Retain",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "UpdateTeacherLambdaFunction"
-        },
-        "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
-      }
-    },
-    "DeleteTeacherLambdaVersionc6EHNFpMhVytT6sRfEtj0Qp1lzNwITssyDVyBoHBbAk": {
+    "DeleteTeacherLambdaVersionwJL2sTL9azxDUOzjSOXb7UozQhURlHq8ZR87ove96Y": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "DeleteTeacherLambdaFunction"
         },
-        "CodeSha256": "TzaMdcu9j8v8Vf/KcfhwSn7Fm5HH8TOScMJ+qUXNHiQ="
+        "CodeSha256": "icfccN500veMSXWavWMmXB/P804iywb5I/ujA60ZhMQ="
+      }
+    },
+    "UpdateTeacherLambdaVersionBieGFNp4OgfqsTemjuKQ7331a8oXCmyMl7wWak9o": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "UpdateTeacherLambdaFunction"
+        },
+        "CodeSha256": "icfccN500veMSXWavWMmXB/P804iywb5I/ujA60ZhMQ="
+      }
+    },
+    "GetAllStudentsLambdaVersionkrv54TgnUrp18l0Niq3Pe19jWJaFgshw2h0ogUqFA": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "GetAllStudentsLambdaFunction"
+        },
+        "CodeSha256": "icfccN500veMSXWavWMmXB/P804iywb5I/ujA60ZhMQ="
       }
     },
     "ApiGatewayRestApi": {
@@ -814,21 +773,6 @@
           ]
         },
         "Policy": ""
-      }
-    },
-    "ApiGatewayResourceProxyVar": {
-      "Type": "AWS::ApiGateway::Resource",
-      "Properties": {
-        "ParentId": {
-          "Fn::GetAtt": [
-            "ApiGatewayRestApi",
-            "RootResourceId"
-          ]
-        },
-        "PathPart": "{proxy+}",
-        "RestApiId": {
-          "Ref": "ApiGatewayRestApi"
-        }
       }
     },
     "ApiGatewayResourceStudents": {
@@ -912,93 +856,274 @@
         }
       }
     },
-    "ApiGatewayMethodAny": {
+    "ApiGatewayMethodStudentsOptions": {
       "Type": "AWS::ApiGateway::Method",
       "Properties": {
-        "HttpMethod": "ANY",
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
         "RequestParameters": {},
-        "ResourceId": {
-          "Fn::GetAtt": [
-            "ApiGatewayRestApi",
-            "RootResourceId"
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,POST,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": "#set($origin = $input.params(\"Origin\"))\n#if($origin == \"\") #set($origin = $input.params(\"origin\")) #end\n#if($origin.matches(\".+\")) #set($context.responseOverride.header.Access-Control-Allow-Origin = $origin) #end"
+              }
+            }
           ]
         },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceStudents"
+        },
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
-        },
-        "ApiKeyRequired": false,
-        "AuthorizationType": "NONE",
-        "Integration": {
-          "IntegrationHttpMethod": "POST",
-          "Type": "AWS_PROXY",
-          "Uri": {
-            "Fn::Join": [
-              "",
-              [
-                "arn:",
-                {
-                  "Ref": "AWS::Partition"
-                },
-                ":apigateway:",
-                {
-                  "Ref": "AWS::Region"
-                },
-                ":lambda:path/2015-03-31/functions/",
-                {
-                  "Fn::GetAtt": [
-                    "IndexLambdaFunction",
-                    "Arn"
-                  ]
-                },
-                "/invocations"
-              ]
-            ]
-          }
-        },
-        "MethodResponses": []
+        }
       }
     },
-    "ApiGatewayMethodProxyVarAny": {
+    "ApiGatewayMethodStudentsIdVarOptions": {
       "Type": "AWS::ApiGateway::Method",
       "Properties": {
-        "HttpMethod": "ANY",
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
         "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,PUT,DELETE,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": "#set($origin = $input.params(\"Origin\"))\n#if($origin == \"\") #set($origin = $input.params(\"origin\")) #end\n#if($origin.matches(\".+\")) #set($context.responseOverride.header.Access-Control-Allow-Origin = $origin) #end"
+              }
+            }
+          ]
+        },
         "ResourceId": {
-          "Ref": "ApiGatewayResourceProxyVar"
+          "Ref": "ApiGatewayResourceStudentsIdVar"
         },
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
-        },
-        "ApiKeyRequired": false,
+        }
+      }
+    },
+    "ApiGatewayMethodCoursesOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
         "AuthorizationType": "NONE",
-        "Integration": {
-          "IntegrationHttpMethod": "POST",
-          "Type": "AWS_PROXY",
-          "Uri": {
-            "Fn::Join": [
-              "",
-              [
-                "arn:",
-                {
-                  "Ref": "AWS::Partition"
-                },
-                ":apigateway:",
-                {
-                  "Ref": "AWS::Region"
-                },
-                ":lambda:path/2015-03-31/functions/",
-                {
-                  "Fn::GetAtt": [
-                    "IndexLambdaFunction",
-                    "Arn"
-                  ]
-                },
-                "/invocations"
-              ]
-            ]
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
           }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,POST,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": "#set($origin = $input.params(\"Origin\"))\n#if($origin == \"\") #set($origin = $input.params(\"origin\")) #end\n#if($origin.matches(\".+\")) #set($context.responseOverride.header.Access-Control-Allow-Origin = $origin) #end"
+              }
+            }
+          ]
         },
-        "MethodResponses": []
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceCourses"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodCoursesIdVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,PUT,DELETE,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": "#set($origin = $input.params(\"Origin\"))\n#if($origin == \"\") #set($origin = $input.params(\"origin\")) #end\n#if($origin.matches(\".+\")) #set($context.responseOverride.header.Access-Control-Allow-Origin = $origin) #end"
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceCoursesIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodTeachersOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,POST,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": "#set($origin = $input.params(\"Origin\"))\n#if($origin == \"\") #set($origin = $input.params(\"origin\")) #end\n#if($origin.matches(\".+\")) #set($context.responseOverride.header.Access-Control-Allow-Origin = $origin) #end"
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceTeachers"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
+      }
+    },
+    "ApiGatewayMethodTeachersIdVarOptions": {
+      "Type": "AWS::ApiGateway::Method",
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "OPTIONS",
+        "MethodResponses": [
+          {
+            "StatusCode": "200",
+            "ResponseParameters": {
+              "method.response.header.Access-Control-Allow-Origin": true,
+              "method.response.header.Access-Control-Allow-Headers": true,
+              "method.response.header.Access-Control-Allow-Methods": true
+            },
+            "ResponseModels": {}
+          }
+        ],
+        "RequestParameters": {},
+        "Integration": {
+          "Type": "MOCK",
+          "RequestTemplates": {
+            "application/json": "{statusCode:200}"
+          },
+          "ContentHandling": "CONVERT_TO_TEXT",
+          "IntegrationResponses": [
+            {
+              "StatusCode": "200",
+              "ResponseParameters": {
+                "method.response.header.Access-Control-Allow-Origin": "'*'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'",
+                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,PUT,DELETE,GET'"
+              },
+              "ResponseTemplates": {
+                "application/json": "#set($origin = $input.params(\"Origin\"))\n#if($origin == \"\") #set($origin = $input.params(\"origin\")) #end\n#if($origin.matches(\".+\")) #set($context.responseOverride.header.Access-Control-Allow-Origin = $origin) #end"
+              }
+            }
+          ]
+        },
+        "ResourceId": {
+          "Ref": "ApiGatewayResourceTeachersIdVar"
+        },
+        "RestApiId": {
+          "Ref": "ApiGatewayRestApi"
+        }
       }
     },
     "ApiGatewayMethodStudentsGet": {
@@ -1646,7 +1771,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1615982250152": {
+    "ApiGatewayDeployment1616087852972": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -1655,8 +1780,12 @@
         "StageName": "dev"
       },
       "DependsOn": [
-        "ApiGatewayMethodAny",
-        "ApiGatewayMethodProxyVarAny",
+        "ApiGatewayMethodStudentsOptions",
+        "ApiGatewayMethodStudentsIdVarOptions",
+        "ApiGatewayMethodCoursesOptions",
+        "ApiGatewayMethodCoursesIdVarOptions",
+        "ApiGatewayMethodTeachersOptions",
+        "ApiGatewayMethodTeachersIdVarOptions",
         "ApiGatewayMethodStudentsGet",
         "ApiGatewayMethodStudentsIdVarGet",
         "ApiGatewayMethodStudentsPost",
@@ -1673,43 +1802,6 @@
         "ApiGatewayMethodTeachersIdVarDelete",
         "ApiGatewayMethodTeachersIdVarPut"
       ]
-    },
-    "IndexLambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Fn::GetAtt": [
-            "IndexLambdaFunction",
-            "Arn"
-          ]
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApi"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      }
     },
     "GetAllStudentsLambdaPermissionApiGateway": {
       "Type": "AWS::Lambda::Permission",
@@ -2273,100 +2365,94 @@
         "Ref": "ServerlessDeploymentBucket"
       }
     },
-    "GetAllStudentsLambdaFunctionQualifiedArn": {
-      "Description": "Current Lambda function version",
-      "Value": {
-        "Ref": "GetAllStudentsLambdaVersion4weCnC9xi8BHuYMt4vwfzUzIS3BECmjdSvHwIxYMtK0"
-      }
-    },
     "GetSingleStudentLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetSingleStudentLambdaVersionCOlhXYDqbokWMlAmwrCgzI5zisQx0qDOUbKwgKPgU"
+        "Ref": "GetSingleStudentLambdaVersionWbmtKUzwLtnw1Jqko1evCi1rVflwi2LIOTGgYdE4Yao"
       }
     },
     "CreateStudentLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateStudentLambdaVersiony1T6u0840Qscm8qpCgSkmnaKdplofnnD7qcyTCyJyw"
+        "Ref": "CreateStudentLambdaVersionDzdT3A2Zc0KJ26l1MPsmAuCRuszYwHLdsxQqf7WrYTs"
       }
     },
     "DeleteStudentLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "DeleteStudentLambdaVersion6WotyFoya2dBv8j9281QzC0bACGUfmlmNHjN7CVKIQ"
+        "Ref": "DeleteStudentLambdaVersionX2DgzF0FyUYZzBvH6CUJ35SkYmJtBNAhVkZ8PQT3sg"
       }
     },
     "UpdateStudentLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "UpdateStudentLambdaVersion1UaocJQhhP3cJ8H1KMl95rhZWVeEwJB6wbL3GKPU"
+        "Ref": "UpdateStudentLambdaVersionVHsgtgg18ybIw2FjC75qnKZy4AxzBVIjnVjjLdDDEg"
       }
     },
     "GetAllCoursesLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetAllCoursesLambdaVersionSFRlCzXBjCtbqQJdhxnz4scHoeLtfUk4Ja3HON5eM"
+        "Ref": "GetAllCoursesLambdaVersionKbNzvyM25Mp4BhfsGwBqUh0GGbId45o49gKq8GH8"
       }
     },
     "GetSingleCourseLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetSingleCourseLambdaVersionLxrfQc319EW7ESQrGA5s7gkPVzLNmw9jkYr8olmI"
-      }
-    },
-    "CreateCourseLambdaFunctionQualifiedArn": {
-      "Description": "Current Lambda function version",
-      "Value": {
-        "Ref": "CreateCourseLambdaVersionEX33ase1rgRz0uTafVlLk4OW4vBniLZwBzr0JzZ2NY"
+        "Ref": "GetSingleCourseLambdaVersionyiiyXSweurttX3Ey0ccOGOkxKGgCbIaCWknxYmWNCbo"
       }
     },
     "DeleteCourseLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "DeleteCourseLambdaVersionwAjxWqFAK1Px205xlEVvBjSWC5Qrp0ggBgwlGl2694"
+        "Ref": "DeleteCourseLambdaVersiongb3IS4aMQb0lSHBummH7bZlZjUNpEm41B2ecLlQ"
+      }
+    },
+    "CreateCourseLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "CreateCourseLambdaVersioncTdJZE2fk3XNLvakgxWFgtcnwXFSBvOWJ1EJan9mwE"
       }
     },
     "UpdateCourseLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "UpdateCourseLambdaVersionaEPoKo2RyDJIwS704dt7TKUW1KUi7Qg8IR63L3lcpJA"
+        "Ref": "UpdateCourseLambdaVersion1EzbgbQ5tjxnZymT02Fbz41J9DVsZvjHsG3CltKt68"
       }
     },
     "GetAllTeachersLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetAllTeachersLambdaVersionscvl1znTmh1WMV7v150NZJ4oWbFx8GwCFMaP98IzhOI"
+        "Ref": "GetAllTeachersLambdaVersion49v5Md5Kutyiqm61D6rVzv13E2kYfi8AENRLTzSTK0M"
       }
     },
     "GetSingleTeacherLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetSingleTeacherLambdaVersionxKe0FB3JXcP3B7BGCSpIpGbFCBrBmUCDCBAfC3tbE"
+        "Ref": "GetSingleTeacherLambdaVersionpUzDjRbY4SLZj9WVMWRsw0IUUts8yFaN5xTvXHRLNrs"
       }
     },
     "CreateTeacherLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateTeacherLambdaVersionpXT8Zg2uGm6Uj3sArkmrUNVXOGtgGsIVxQNcvWbFftw"
-      }
-    },
-    "IndexLambdaFunctionQualifiedArn": {
-      "Description": "Current Lambda function version",
-      "Value": {
-        "Ref": "IndexLambdaVersionIQE1fBAzheyp6yeAulF1aOcKZUUrIXoiXUUTsV2bYQ"
-      }
-    },
-    "UpdateTeacherLambdaFunctionQualifiedArn": {
-      "Description": "Current Lambda function version",
-      "Value": {
-        "Ref": "UpdateTeacherLambdaVersion5a16YKRzTNUmvG2rG8m04VxKFFrouaB92U53274ao"
+        "Ref": "CreateTeacherLambdaVersioniayBLUBzsPycUK99PpEsswK0DbeaJ8L9GrOljr4E8"
       }
     },
     "DeleteTeacherLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "DeleteTeacherLambdaVersionc6EHNFpMhVytT6sRfEtj0Qp1lzNwITssyDVyBoHBbAk"
+        "Ref": "DeleteTeacherLambdaVersionwJL2sTL9azxDUOzjSOXb7UozQhURlHq8ZR87ove96Y"
+      }
+    },
+    "UpdateTeacherLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "UpdateTeacherLambdaVersionBieGFNp4OgfqsTemjuKQ7331a8oXCmyMl7wWak9o"
+      }
+    },
+    "GetAllStudentsLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "GetAllStudentsLambdaVersionkrv54TgnUrp18l0Niq3Pe19jWJaFgshw2h0ogUqFA"
       }
     },
     "ServiceEndpoint": {

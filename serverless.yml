@@ -9,18 +9,13 @@ provider:
 useDotenv: true
 
 functions:
-  index:
-    handler: index.handler
-    events:
-      - http: ANY /
-      - http: "ANY {proxy+}"
-
   getAllStudents:
     handler: handlers/students/getAllStudents.handler
     events:
       - http:
           path: /students
           method: get
+          cors: true
 
   getSingleStudent:
     handler: handlers/students/getSingleStudent.handler
@@ -28,6 +23,7 @@ functions:
       - http:
           path: /students/{id}
           method: get
+          cors: true
 
   createStudent:
     handler: handlers/students/create.handler
@@ -35,6 +31,7 @@ functions:
       - http:
           path: /students
           method: post
+          cors: true
 
   deleteStudent:
     handler: handlers/students/delete.handler
@@ -42,6 +39,7 @@ functions:
       - http:
           path: /students/{id}
           method: delete
+          cors: true
 
   updateStudent:
     handler: handlers/students/update.handler
@@ -49,6 +47,7 @@ functions:
       - http:
           path: /students/{id}
           method: put
+          cors: true
 
   getAllCourses:
     handler: handlers/courses/getAllCourses.handler
@@ -56,6 +55,7 @@ functions:
       - http:
           path: /courses
           method: get
+          cors: true
 
   getSingleCourse:
     handler: handlers/courses/getSingleCourse.handler
@@ -63,6 +63,7 @@ functions:
       - http:
           path: /courses/{id}
           method: get
+          cors: true
 
   createCourse:
     handler: handlers/courses/createCourse.handler
@@ -70,6 +71,7 @@ functions:
       - http:
           path: /courses
           method: post
+          cors: true
 
   deleteCourse:
     handler: handlers/courses/deleteCourse.handler
@@ -77,6 +79,7 @@ functions:
       - http:
           path: /courses/{id}
           method: delete
+          cors: true
 
   updateCourse:
     handler: handlers/courses/updateCourse.handler
@@ -84,6 +87,7 @@ functions:
       - http:
           path: /courses/{id}
           method: put
+          cors: true
 
   getAllTeachers:
     handler: handlers/teachers/getAllTeachers.handler
@@ -91,6 +95,7 @@ functions:
       - http:
           path: /teachers
           method: get
+          cors: true
 
   getSingleTeacher:
     handler: handlers/teachers/getSingleTeacher.handler
@@ -98,6 +103,7 @@ functions:
       - http:
           path: /teachers/{id}
           method: get
+          cors: true
 
   createTeacher:
     handler: handlers/teachers/create.handler
@@ -105,6 +111,7 @@ functions:
       - http:
           path: /teachers
           method: post
+          cors: true
 
   deleteTeacher:
     handler: handlers/teachers/delete.handler
@@ -112,6 +119,7 @@ functions:
       - http:
           path: /teachers/{id}
           method: delete
+          cors: true
 
   updateTeacher:
     handler: handlers/teachers/update.handler
@@ -119,3 +127,4 @@ functions:
       - http:
           path: /teachers/{id}
           method: put
+          cors: true

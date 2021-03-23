@@ -21,7 +21,7 @@ module.exports.handler = async(event, context, callback) => {
               const response = {
                    statusCode: 404, 
                   body: JSON.stringify({ message: "Not found error" }),
-                  headers: { 'Access-Control-Allow-Origin': '*' }
+                  // headers: { 'Access-Control-Allow-Origin': '*' }
               }
               return response;
             }
